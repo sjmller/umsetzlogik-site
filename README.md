@@ -41,3 +41,11 @@ Dann `http://localhost:8080` öffnen.
 
 ## Grafiken und Piktogramme
 Alle Logos, Portraits, Hero-Grafiken und Piktogramme sind bewusst als Platzhalter angelegt. Die finalen visuellen Assets werden vom Auftraggeber ausgewählt und anschließend eingesetzt.
+
+## Aktueller Asset-Stand
+
+- Portrait: final eingebunden (`assets/sergej-mueller.webp`)
+- Logo: Primärlogo eingebunden (`assets/logo-primary.webp`)
+- Hero-/Markengrafiken: Platzhalter
+- Piktogramme/Icons: Platzhalter; finale Auswahl folgt
+- GitHub Pages Custom Domain: `umsetzlogik.de` über `CNAME`
