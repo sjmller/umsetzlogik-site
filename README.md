@@ -38,3 +38,6 @@ python -m http.server 8080
 ```
 
 Dann `http://localhost:8080` öffnen.
+
+## Grafiken und Piktogramme
+Alle Logos, Portraits, Hero-Grafiken und Piktogramme sind bewusst als Platzhalter angelegt. Die finalen visuellen Assets werden vom Auftraggeber ausgewählt und anschließend eingesetzt.
