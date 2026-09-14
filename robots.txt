@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://umsetzlogik.de/sitemap.xml
