@@ -49,3 +49,5 @@ Alle Logos, Portraits, Hero-Grafiken und Piktogramme sind bewusst als Platzhalte
 - Hero-/Markengrafiken: Platzhalter
 - Piktogramme/Icons: Platzhalter; finale Auswahl folgt
 - GitHub Pages Custom Domain: `umsetzlogik.de` über `CNAME`
+
+- Cache-Busting für CSS/Assets aktiviert, um Darstellungsfehler nach Deployments zu vermeiden.
