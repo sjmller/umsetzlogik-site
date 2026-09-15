@@ -53,3 +53,11 @@ Alle Logos, Portraits, Hero-Grafiken und Piktogramme sind bewusst als Platzhalte
 - Cache-Busting für CSS/Assets aktiviert, um Darstellungsfehler nach Deployments zu vermeiden.
 
 - Logo-Variante A: enger Zuschnitt, höhere Lesbarkeit des Claims, 290 px Desktop-Header
+
+
+## Finaler Launch-Check
+
+- Die Website verwendet Inter, sofern die Schrift lokal auf dem Endgerät vorhanden ist. Für eine garantiert identische Darstellung sollte Inter später datenschutzfreundlich selbst gehostet werden. In diesem Paket werden bewusst keine externen Font-CDNs eingebunden.
+- Impressum und Datenschutz enthalten weiterhin markierte Platzhalter für die ladungsfähige Anschrift bzw. hostingbezogene Angaben. Diese Daten wurden nicht bereitgestellt und wurden daher nicht erfunden.
+- HTTPS/DNS wird außerhalb des Website-Pakets in GitHub Pages bzw. beim DNS-Provider konfiguriert.
+- Das Kontaktformular ist funktional und öffnet das lokale E-Mail-Programm mit den ausgefüllten Angaben; es überträgt keine Formulardaten an einen Webserver.
