@@ -51,3 +51,5 @@ Alle Logos, Portraits, Hero-Grafiken und Piktogramme sind bewusst als Platzhalte
 - GitHub Pages Custom Domain: `umsetzlogik.de` über `CNAME`
 
 - Cache-Busting für CSS/Assets aktiviert, um Darstellungsfehler nach Deployments zu vermeiden.
+
+- Logo-Variante A: enger Zuschnitt, höhere Lesbarkeit des Claims, 290 px Desktop-Header
