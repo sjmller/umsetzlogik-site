@@ -14,6 +14,14 @@ document.addEventListener("DOMContentLoaded", () => {
         toggle.setAttribute("aria-expanded", "false");
       });
     });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && nav.classList.contains("open")) {
+        nav.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.focus();
+      }
+    });
   }
 
   const mailForm = document.querySelector("[data-mail-form]");
