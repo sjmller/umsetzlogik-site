@@ -61,3 +61,16 @@ Alle Logos, Portraits, Hero-Grafiken und Piktogramme sind bewusst als Platzhalte
 - Impressum und Datenschutz enthalten weiterhin markierte Platzhalter für die ladungsfähige Anschrift bzw. hostingbezogene Angaben. Diese Daten wurden nicht bereitgestellt und wurden daher nicht erfunden.
 - HTTPS/DNS wird außerhalb des Website-Pakets in GitHub Pages bzw. beim DNS-Provider konfiguriert.
 - Das Kontaktformular ist funktional und öffnet das lokale E-Mail-Programm mit den ausgefüllten Angaben; es überträgt keine Formulardaten an einen Webserver.
+
+
+## Visuelle Typen – verbindliche Einordnung
+
+Die Website unterscheidet bewusst zwischen **Grafiken** und **Piktogrammen**. Grafiken sind markenspezifische, erklärende Visuals und werden individuell in der Formensprache von Umsetzlogik erstellt. Piktogramme dienen der funktionalen Orientierung und können aus einem konsistenten Icon-System stammen.
+
+- **Landing Page:** Herausforderung = Grafiken; Arbeitsweise = Grafiken; Leistungen = Piktogramme.
+- **Leistungen:** Hero/Leistungen = Grafik aus dem Bereich „Herausforderung“; Leistungen im Detail = Piktogramme.
+- **Arbeitsweise:** Hero/Arbeitsweise = Grafik; fünf Schritte = Grafiken; Prinzipien = Piktogramme.
+- **Über Umsetzlogik:** Über = Grafik; Kompetenzprofil = Piktogramme.
+- **Kontakt:** E-Mail = Piktogramm; LinkedIn = Piktogramm, alternativ Standardlogo; „Was Sie erwartet“ = Piktogramme.
+
+Die Platzhalter im HTML sind entsprechend semantisch getrennt. Finale Grafiken und Piktogramme werden später als SVG-Assets eingesetzt.

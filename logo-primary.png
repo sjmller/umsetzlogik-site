@@ -681,3 +681,17 @@ h1,h2,h3,p{margin-top:0} h1{font-size:clamp(2.45rem,5vw,5.5rem);line-height:.98;
     margin-top:34px;
   }
 }
+
+
+/* VISUAL TYPE SYSTEM — graphics vs. pictograms (2026-09-15) */
+/* Brand graphics are explanatory, custom visuals derived from Umsetzlogik's visual language. */
+.challenge-graphic-placeholder{width:72px;height:54px;min-height:54px;flex:0 0 72px;padding:6px}
+.challenge-graphic-placeholder span{font-size:.50rem;letter-spacing:.08em}
+.process-graphic-placeholder{width:72px;height:54px;min-height:54px;margin:0 auto 18px;padding:6px;border-radius:6px}
+.process-graphic-placeholder span{font-size:.50rem;letter-spacing:.08em}
+.brand-graphic-placeholder,.reused-challenge-graphic-placeholder{position:relative}
+.reused-challenge-graphic-placeholder span{max-width:22ch}
+@media (max-width:660px){
+  .challenge-graphic-placeholder{width:64px;height:50px;min-height:50px;flex-basis:64px}
+  .process-graphic-placeholder{width:64px;height:50px;min-height:50px}
+}
