@@ -810,12 +810,12 @@ h1,h2,h3,p{margin-top:0} h1{font-size:clamp(2.45rem,5vw,5.5rem);line-height:.98;
 .service-row:first-of-type{padding-top:40px;border-top:0}
 .service-side{
   display:grid;
-  grid-template-columns:72px minmax(0,720px);
-  gap:22px;
+  grid-template-columns:68px minmax(0,720px);
+  gap:20px;
   align-items:start;
   max-width:900px;
 }
-.service-side>.icon{padding-top:4px}
+.service-side>.icon{padding-top:0;display:flex;align-items:flex-start;justify-content:flex-start}
 .service-side .service-area-pictogram-placeholder{width:64px;height:64px;min-height:64px}
 .service-packages{display:grid;grid-template-columns:1fr;gap:0;margin-left:94px;max-width:980px}
 .package{
@@ -883,7 +883,7 @@ h1,h2,h3,p{margin-top:0} h1{font-size:clamp(2.45rem,5vw,5.5rem);line-height:.98;
   .process-pictogram-placeholder{width:56px;height:44px;min-height:44px}
 
   .service-row{padding:44px 0;gap:22px}
-  .service-side{grid-template-columns:1fr;gap:16px}
+  .service-side{grid-template-columns:1fr;gap:12px}
   .service-side>.icon{padding-top:0}
   .service-side .service-area-pictogram-placeholder{width:48px;height:48px;min-height:48px}
   .service-packages{margin-left:0;row-gap:6px}
@@ -894,4 +894,60 @@ h1,h2,h3,p{margin-top:0} h1{font-size:clamp(2.45rem,5vw,5.5rem);line-height:.98;
   .practice-section .practice-proof{grid-template-columns:96px minmax(0,1fr);gap:20px}
   .practice-section .practice-proof .portrait{width:96px;height:96px}
   .practice-section .practice-quote .quote{font-size:1.28rem}
+}
+
+/* APPROVED SERVICE PICTOGRAM ASSETS */
+.pictogram-asset{width:64px;height:64px;object-fit:contain;display:block;flex:0 0 64px}
+.service-side .pictogram-asset{width:64px;height:64px}
+@media (max-width:660px){.pictogram-asset,.service-side .pictogram-asset{width:52px;height:52px;flex-basis:52px}}
+
+/* LEISTUNGEN — final spacing and visual-weight polish */
+@media (min-width:981px){
+  .service-row{
+    gap:20px;
+    padding:48px 0;
+  }
+  .service-row:first-of-type{padding-top:32px}
+  .service-side{
+    grid-template-columns:74px minmax(0,720px);
+    gap:16px;
+  }
+  .service-side>.icon{padding-top:1px}
+  .service-side .pictogram-asset{
+    width:70px;
+    height:70px;
+    flex-basis:70px;
+  }
+  .service-packages{
+    margin-left:90px;
+  }
+}
+
+@media (max-width:660px){
+  .service-row{
+    padding:40px 0;
+    gap:18px;
+  }
+  .service-row:first-of-type{padding-top:26px}
+  .service-side{gap:10px}
+  .service-side>.icon{margin-bottom:4px}
+  .service-side .pictogram-asset{
+    width:52px;
+    height:52px;
+    flex-basis:52px;
+  }
+  .service-packages{row-gap:2px}
+  .package{padding:24px 0}
+}
+
+/* LANDING PAGE — service card pictogram sizing */
+.service-card .pictogram-asset{width:54px;height:54px;flex-basis:54px}
+@media (max-width:660px){.service-card .pictogram-asset{width:50px;height:50px;flex-basis:50px}}
+
+/* OPTICAL PICTOGRAM BALANCE — Digitalisierung slightly reduced */
+.service-card:first-child .pictogram-asset{width:50px;height:50px;flex-basis:50px}
+.service-row:first-of-type .pictogram-asset{width:65px;height:65px;flex-basis:65px}
+@media (max-width:660px){
+  .service-card:first-child .pictogram-asset{width:47px;height:47px;flex-basis:47px}
+  .service-row:first-of-type .pictogram-asset{width:49px;height:49px;flex-basis:49px}
 }
