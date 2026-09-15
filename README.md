@@ -45,7 +45,7 @@ Alle Logos, Portraits, Hero-Grafiken und Piktogramme sind bewusst als Platzhalte
 ## Aktueller Asset-Stand
 
 - Portrait: final eingebunden (`assets/sergej-mueller.webp`)
-- Logo: Primärlogo eingebunden (`assets/logo-primary.webp`)
+- Logo: Primärlogo eingebunden (`assets/logo-primary.png`)
 - Hero-/Markengrafiken: Platzhalter
 - Piktogramme/Icons: Platzhalter; finale Auswahl folgt
 - GitHub Pages Custom Domain: `umsetzlogik.de` über `CNAME`
