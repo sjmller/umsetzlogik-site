@@ -951,3 +951,30 @@ h1,h2,h3,p{margin-top:0} h1{font-size:clamp(2.45rem,5vw,5.5rem);line-height:.98;
   .service-card:first-child .pictogram-asset{width:47px;height:47px;flex-basis:47px}
   .service-row:first-of-type .pictogram-asset{width:49px;height:49px;flex-basis:49px}
 }
+
+/* ARBEITSWEISE — principle pictograms, optical balance */
+.principles .principle-pictogram{
+  width:58px;
+  height:58px;
+  object-fit:contain;
+  margin:0 auto 14px;
+  display:block;
+}
+/* Optical, not mathematical, equality: compensate for different visual densities. */
+.principles>div:nth-child(1) .principle-pictogram{width:62px;height:62px}
+.principles>div:nth-child(2) .principle-pictogram{width:58px;height:58px}
+.principles>div:nth-child(3) .principle-pictogram{width:58px;height:58px}
+.principles>div:nth-child(4) .principle-pictogram{width:64px;height:64px}
+
+@media (max-width:660px){
+  .principles>div{padding:18px 0}
+  .principles>div:first-child{padding-top:10px}
+  .principles .icon{height:auto;margin:0 auto 10px}
+  .principles .principle-pictogram{margin-bottom:10px}
+  .principles>div:nth-child(1) .principle-pictogram{width:58px;height:58px}
+  .principles>div:nth-child(2) .principle-pictogram{width:54px;height:54px}
+  .principles>div:nth-child(3) .principle-pictogram{width:54px;height:54px}
+  .principles>div:nth-child(4) .principle-pictogram{width:60px;height:60px}
+  .principles h3{margin-bottom:8px}
+  .principles p{margin-bottom:0}
+}
