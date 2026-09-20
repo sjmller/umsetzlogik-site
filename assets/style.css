@@ -43,7 +43,7 @@ h1,h2,h3,p{margin-top:0} h1{font-size:clamp(2.45rem,5vw,5.5rem);line-height:.98;
 .step-icon .graphic-placeholder{height:76px;min-height:76px}
 .portrait-placeholder{width:150px;height:150px;min-height:150px;border-radius:50%;padding:18px}
 @media (max-width:980px){.brand .graphic-placeholder{width:190px;height:64px;min-height:64px}}
-@media (max-width:660px){.hero-art .graphic-placeholder{height:160px;min-height:160px}.portrait-placeholder{width:130px;height:130px;min-height:130px}}
+@media (max-width:660px){.hero-art .graphic-placeholder{height:160px;min-height:205px}.portrait-placeholder{width:130px;height:130px;min-height:130px}}
 
 /* HIGH-RES VECTOR PICTOGRAMS */
 
@@ -110,8 +110,8 @@ h1,h2,h3,p{margin-top:0} h1{font-size:clamp(2.45rem,5vw,5.5rem);line-height:.98;
 }
 
 .industry-proof{
-  border-top:1px solid rgba(11,45,74,.06);
-  border-bottom:1px solid rgba(11,45,74,.06);
+  border-top:0;
+  border-bottom:0;
 }
 
 .industry-proof-head{
@@ -344,15 +344,6 @@ h1,h2,h3,p{margin-top:0} h1{font-size:clamp(2.45rem,5vw,5.5rem);line-height:.98;
 
 
 /* FINAL CONSISTENCY */
-.service-nav .btn.ghost{
-  text-decoration:none;
-}
-.service-nav .btn.ghost:hover,
-.service-nav .btn.ghost:focus-visible{
-  text-decoration:underline;
-  text-decoration-thickness:1px;
-  text-underline-offset:6px;
-}
 .contact-owner-role{
   margin:-4px 0 8px;
   font-size:.92rem;
@@ -396,7 +387,6 @@ h1,h2,h3,p{margin-top:0} h1{font-size:clamp(2.45rem,5vw,5.5rem);line-height:.98;
 
 
 /* REDUNDANCY + CONTACT REFINEMENT */
-.process-more,
 .section-link{
   margin-top:24px;
 }
@@ -407,7 +397,9 @@ h1,h2,h3,p{margin-top:0} h1{font-size:clamp(2.45rem,5vw,5.5rem);line-height:.98;
   gap:64px;
   align-items:center;
 }
-.principle-statement .lead,
+.principle-statement .lead{
+  margin-bottom:0;
+}
 .about-value-summary .lead{
   margin-bottom:14px;
 }
@@ -696,7 +688,7 @@ h1,h2,h3,p{margin-top:0} h1{font-size:clamp(2.45rem,5vw,5.5rem);line-height:.98;
   .detail-context{padding-left:0;border-left:0;border-top:1px solid var(--cyan);padding-top:24px;max-width:none}
 }
 @media (max-width:660px){
-  .page-hero .graphic-placeholder.hero{min-height:160px}
+  .page-hero .graphic-placeholder.hero{min-height:205px}
   .support-section{padding:50px 0}
   .step-card{grid-template-columns:34px 1fr;gap:10px 14px;padding:22px 0}
   .step-card h3{grid-column:2}
@@ -957,7 +949,7 @@ h1,h2,h3,p{margin-top:0} h1{font-size:clamp(2.45rem,5vw,5.5rem);line-height:.98;
   width:58px;
   height:58px;
   object-fit:contain;
-  margin:0 auto 14px;
+  margin:0 auto 16px;
   display:block;
 }
 /* Optical, not mathematical, equality: compensate for different visual densities. */
@@ -977,4 +969,603 @@ h1,h2,h3,p{margin-top:0} h1{font-size:clamp(2.45rem,5vw,5.5rem);line-height:.98;
   .principles>div:nth-child(4) .principle-pictogram{width:60px;height:60px}
   .principles h3{margin-bottom:8px}
   .principles p{margin-bottom:0}
+}
+
+/* CONTACT / INQUIRY SYSTEM — modernized 2026-09-16 */
+.inquiry-cta{overflow:hidden}
+.inquiry-cta-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);
+  grid-template-areas:
+    "copy button"
+    "copy options";
+  column-gap:68px;
+  row-gap:14px;
+  align-items:start;
+}
+.inquiry-copy{grid-area:copy}
+.inquiry-primary{grid-area:button;justify-self:stretch;width:100%;margin-top:28px}
+.inquiry-options{grid-area:options}
+.inquiry-copy h2{max-width:760px;margin-bottom:14px}
+.inquiry-copy>.muted{font-size:1.05rem;margin-bottom:0}
+.inquiry-primary{min-width:220px}
+.inquiry-options{display:grid;gap:14px}
+.inquiry-option{
+  min-width:0;
+  display:grid;
+  grid-template-columns:52px minmax(0,1fr);
+  gap:18px;
+  align-items:center;
+  padding:18px 20px;
+  border:1px solid rgba(11,45,74,.09);
+  border-radius:4px;
+  background:#fff;
+  box-shadow:0 4px 14px rgba(11,45,74,.022);
+  transition:border-color .18s ease,box-shadow .18s ease,transform .18s ease;
+}
+.inquiry-option:hover{
+  border-color:rgba(5,165,192,.34);
+  box-shadow:0 6px 18px rgba(11,45,74,.04);
+  transform:translateY(-1px);
+}
+.inquiry-option:focus-visible{outline:0;box-shadow:var(--focus-ring),0 6px 18px rgba(11,45,74,.04)}
+.inquiry-option-icon,.contact-method-icon{
+  width:52px;height:52px;border-radius:50%;
+  display:grid;place-items:center;
+  background:rgba(5,165,192,.08);
+  color:var(--petrol);
+  flex:0 0 52px;
+}
+.inquiry-option-icon svg,.contact-method-icon svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.inquiry-linkedin-icon{font-size:1.65rem;font-weight:800;line-height:1;letter-spacing:-.06em}
+.inquiry-option-copy{display:grid;gap:3px;min-width:0}
+.inquiry-option-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--petrol)}
+.inquiry-option-value{font-size:1rem;font-weight:600;overflow-wrap:anywhere}
+
+.contact-request-section{background:linear-gradient(90deg,rgba(244,249,246,.97),rgba(230,246,247,.60),rgba(244,249,246,.97))}
+.contact-layout-modern{grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);gap:72px;align-items:start}
+.contact-request-panel{
+  padding:36px;
+  background:rgba(255,255,255,.80);
+  border:1px solid rgba(11,45,74,.09);
+  border-radius:10px;
+  box-shadow:0 12px 34px rgba(11,45,74,.045);
+}
+.contact-request-panel h2{margin-bottom:10px}
+.contact-request-intro{max-width:640px;margin-bottom:28px}
+.form-grid-modern{gap:18px}
+.form-grid-modern .field label{font-size:.76rem;letter-spacing:.04em;color:var(--navy);margin-bottom:8px}
+.form-grid-modern .field input,.form-grid-modern .field textarea{
+  border:1px solid rgba(11,45,74,.14);
+  background:#fff;
+  padding:14px 15px;
+  border-radius:6px;
+  box-shadow:inset 0 1px 0 rgba(11,45,74,.015);
+  transition:border-color .16s ease,box-shadow .16s ease;
+}
+.form-grid-modern .field input:hover,.form-grid-modern .field textarea:hover{border-color:rgba(11,45,74,.25)}
+.form-grid-modern .field input:focus,.form-grid-modern .field textarea:focus{border-color:var(--cyan);box-shadow:var(--focus-ring)}
+.form-grid-modern .field textarea{min-height:190px}
+.form-submit-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:2px}
+.form-submit-row .form-note{margin:0;max-width:360px;line-height:1.4}
+.contact-direct-panel h2{font-size:clamp(1.9rem,2.6vw,2.75rem);margin-bottom:24px}
+
+.contact-direct-panel>.eyebrow{margin-bottom:24px}
+.contact-methods{border-top:1px solid rgba(5,165,192,.26)}
+.contact-method{
+  display:grid;
+  grid-template-columns:58px minmax(0,1fr);
+  gap:20px;
+  align-items:start;
+  padding:24px 0;
+  border-bottom:1px solid rgba(5,165,192,.26);
+}
+.contact-method:hover .contact-method-value{text-decoration:underline;text-decoration-color:rgba(5,165,192,.55);text-underline-offset:4px}
+.contact-method:focus-visible{outline:0;box-shadow:var(--focus-ring)}
+.contact-method-icon{width:54px;height:54px;border-radius:50%;margin-top:1px}
+.contact-method-copy{display:grid;gap:5px;min-width:0}
+.contact-method-copy>strong{font-size:1.15rem}
+.contact-method-value{font-size:1.02rem;font-weight:500;overflow-wrap:anywhere}
+.contact-method-copy .small{margin:0;line-height:1.45}
+.contact-owner-modern{padding-top:34px}
+.contact-owner-modern>.eyebrow{margin-bottom:22px}
+.contact-owner-inner{display:grid;grid-template-columns:132px minmax(0,1fr);gap:24px;align-items:center}
+.contact-owner-inner .portrait-photo{width:132px;height:132px;min-width:132px}
+.contact-owner-inner h3{font-size:1.4rem;margin-bottom:7px}
+.contact-owner-inner p{margin-bottom:8px}
+
+@media (max-width:980px){
+  .inquiry-cta-grid{
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "copy"
+      "button"
+      "options";
+    gap:30px;
+  }
+  .contact-layout-modern{grid-template-columns:1fr;gap:38px}
+  .inquiry-copy{max-width:760px}
+  .inquiry-primary{margin-top:0}
+  .inquiry-options{grid-template-columns:1fr 1fr;margin-top:0}
+  .contact-direct-panel{max-width:760px}
+}
+@media (max-width:660px){
+  .inquiry-cta{padding:52px 0}
+  .inquiry-copy h2{font-size:clamp(1.95rem,9vw,2.9rem);line-height:1.07}
+  .inquiry-copy>.muted{font-size:1rem;margin-bottom:0}
+  .inquiry-primary{width:100%}
+  .inquiry-options{grid-template-columns:1fr;gap:12px}
+  .inquiry-option{grid-template-columns:48px minmax(0,1fr);gap:15px;padding:16px;border-radius:4px}
+  .inquiry-option-icon,.contact-method-icon{width:48px;height:48px}
+  .inquiry-option-value{font-size:.98rem}
+  .contact-request-panel{padding:24px 18px;border-radius:8px}
+  .contact-layout-modern{gap:48px}
+  .form-grid-modern{gap:15px}
+  .form-submit-row{display:grid;gap:12px}
+  .form-submit-row .btn{width:100%}
+  .contact-direct-panel h2{font-size:2rem}
+  .contact-method{grid-template-columns:50px minmax(0,1fr);gap:16px;padding:22px 0}
+  .contact-method-copy>strong{font-size:1.08rem}
+  .contact-method-value{font-size:.98rem}
+  .contact-owner-modern{padding-top:30px}
+  .contact-owner-inner{grid-template-columns:104px minmax(0,1fr);gap:18px;align-items:start}
+  .contact-owner-inner .portrait-photo{width:104px;height:104px;min-width:104px}
+  .contact-owner-inner h3{font-size:1.2rem}
+}
+@media (prefers-reduced-motion:reduce){
+  .inquiry-option{transition:none}
+}
+
+/* LEISTUNGEN — scalable product catalog grid (2026-09-20) */
+.product-catalog-section{
+  background:#fff;
+}
+.product-catalog-section>.container>h2{margin-bottom:34px}
+.product-catalog-section .service-row{
+  gap:30px;
+  padding:58px 0;
+}
+.product-catalog-section .service-row:first-of-type{padding-top:30px}
+.product-catalog-section .service-packages.product-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+  margin-left:90px;
+  max-width:none;
+}
+.product-catalog-section .package.product-card{
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  min-height:100%;
+  gap:0;
+  padding:28px 26px 24px;
+  margin:0;
+  border:1px solid rgba(5,165,192,.20);
+  border-radius:4px;
+  background:#fff;
+  box-shadow:0 8px 22px rgba(11,45,74,.025);
+}
+.product-catalog-section .product-card + .product-card{margin-top:0}
+.product-catalog-section .product-card .package-copy h3{
+  margin:0 0 9px;
+  font-size:1.18rem;
+  line-height:1.18;
+}
+.product-catalog-section .product-card .package-copy p{
+  margin:0;
+  min-height:3.1em;
+  line-height:1.45;
+}
+.product-catalog-section .product-points{
+  padding-top:22px;
+  margin-bottom:24px;
+}
+.product-catalog-section .product-points ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.product-catalog-section .product-points li{
+  position:relative;
+  margin:8px 0;
+  padding-left:23px;
+  line-height:1.4;
+}
+.product-catalog-section .product-points li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  top:-.02em;
+  color:var(--cyan);
+  font-weight:800;
+}
+.product-catalog-section .product-result{
+  display:grid;
+  gap:4px;
+  margin-top:auto;
+  padding-top:16px;
+  border-top:1px solid rgba(5,165,192,.18);
+}
+.product-catalog-section .product-result-label{
+  color:var(--petrol);
+  font-size:.72rem;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.product-catalog-section .product-result-value{
+  color:#49636f;
+  font-size:.91rem;
+  line-height:1.4;
+}
+@media (max-width:1100px){
+  .product-catalog-section .service-packages.product-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+@media (max-width:980px){
+  .product-catalog-section .service-packages.product-grid{
+    margin-left:0;
+  }
+}
+@media (max-width:660px){
+  .product-catalog-section .service-row{padding:44px 0;gap:24px}
+  .product-catalog-section .service-row:first-of-type{padding-top:24px}
+  .product-catalog-section .service-packages.product-grid{
+    grid-template-columns:1fr;
+    gap:14px;
+    row-gap:14px;
+  }
+  .product-catalog-section .package.product-card{
+    padding:22px 20px 20px;
+    border-radius:3px;
+  }
+  .product-catalog-section .product-card .package-copy p{min-height:0}
+  .product-catalog-section .product-points{padding-top:18px;margin-bottom:20px}
+  .product-catalog-section .product-result{padding-top:14px}
+}
+
+
+/* SECTION RHYTHM — 2026-09-20
+   Primary chapter separation uses background planes. Whitespace separates content within a chapter;
+   lines remain only where they clarify internal structure. */
+
+/* Service catalog anchors */
+.service-row{scroll-margin-top:112px}
+
+
+/* CONTACT — pictograms aligned to the Arbeitsweise principle set (reference standard) */
+.expect .icon{
+  width:72px;
+  height:70px;
+  display:grid;
+  place-items:center;
+  margin:0 auto 10px;
+  color:var(--navy);
+}
+.expect .expect-pictogram{
+  display:block;
+  object-fit:contain;
+  margin:0;
+}
+/* Optical, not mathematical, equality: compensate for different visual densities. */
+.expect .expect-pictogram-open{width:60px;height:60px}
+.expect .expect-pictogram-assessment{width:54px;height:54px}
+.expect .expect-pictogram-next{width:44px;height:44px}
+.expect .expect-pictogram-open-door{width:62px;height:62px}
+.expect h3{margin-top:0}
+@media (max-width:660px){
+  .expect .icon{width:68px;height:64px;margin-bottom:8px}
+  .expect .expect-pictogram-open{width:56px;height:56px}
+  .expect .expect-pictogram-assessment{width:52px;height:52px}
+  .expect .expect-pictogram-next{width:42px;height:42px}
+  .expect .expect-pictogram-open-door{width:58px;height:58px}
+}
+
+/* LEISTUNGEN — category intro: editorial text left, pictogram right (2026-09-20) */
+@media (min-width:981px){
+  .product-catalog-section .service-side{
+    width:100%;
+    max-width:none;
+    grid-template-columns:minmax(0,760px) minmax(180px,1fr);
+    column-gap:72px;
+    align-items:center;
+  }
+  .product-catalog-section .service-side > .icon{
+    grid-column:2;
+    grid-row:1;
+    justify-content:flex-end;
+    align-items:center;
+    padding:0;
+  }
+  .product-catalog-section .service-side > div:not(.icon){
+    grid-column:1;
+    grid-row:1;
+    min-width:0;
+  }
+  .product-catalog-section .service-side .pictogram-asset{
+    width:138px;
+    height:138px;
+    flex-basis:138px;
+    opacity:.96;
+  }
+  .product-catalog-section .service-row:first-of-type .pictogram-asset{
+    width:128px;
+    height:128px;
+    flex-basis:128px;
+  }
+  .product-catalog-section .service-packages.product-grid{
+    margin-left:0;
+  }
+  .product-catalog-section .service-side .btn.ghost{
+    margin-left:0;
+  }
+}
+
+@media (min-width:981px) and (max-width:1180px){
+  .product-catalog-section .service-side{
+    grid-template-columns:minmax(0,680px) minmax(150px,1fr);
+    column-gap:44px;
+  }
+  .product-catalog-section .service-side .pictogram-asset{
+    width:116px;
+    height:116px;
+    flex-basis:116px;
+  }
+  .product-catalog-section .service-row:first-of-type .pictogram-asset{
+    width:108px;
+    height:108px;
+    flex-basis:108px;
+  }
+}
+
+
+/* LEISTUNGEN — final category composition: copy left, large pictogram right */
+@media (min-width:981px){
+  .product-catalog-section .service-side{
+    display:grid !important;
+    grid-template-columns:minmax(0,760px) minmax(220px,1fr) !important;
+    column-gap:84px !important;
+    align-items:center !important;
+    width:100% !important;
+    max-width:none !important;
+  }
+  .product-catalog-section .service-side > .service-copy{
+    grid-column:1 !important;
+    grid-row:1 !important;
+    min-width:0;
+  }
+  .product-catalog-section .service-side > .icon{
+    grid-column:2 !important;
+    grid-row:1 !important;
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+    padding:0 !important;
+    margin:0 !important;
+    min-height:250px;
+  }
+  .product-catalog-section .service-side .pictogram-asset{
+    width:240px !important;
+    height:240px !important;
+    flex:0 0 240px !important;
+    object-fit:contain;
+  }
+  /* Digitalisierung has slightly more optical mass. */
+  .product-catalog-section .service-row:first-of-type .pictogram-asset{
+    width:224px !important;
+    height:224px !important;
+    flex-basis:224px !important;
+  }
+  .product-catalog-section .service-side .btn.ghost{
+    margin-left:0 !important;
+  }
+}
+@media (min-width:981px) and (max-width:1180px){
+  .product-catalog-section .service-side{
+    grid-template-columns:minmax(0,650px) minmax(180px,1fr) !important;
+    column-gap:52px !important;
+  }
+  .product-catalog-section .service-side > .icon{min-height:205px}
+  .product-catalog-section .service-side .pictogram-asset{
+    width:190px !important;height:190px !important;flex-basis:190px !important;
+  }
+  .product-catalog-section .service-row:first-of-type .pictogram-asset{
+    width:178px !important;height:178px !important;flex-basis:178px !important;
+  }
+}
+@media (max-width:980px){
+  .product-catalog-section .service-side{
+    display:grid;
+    grid-template-columns:1fr;
+  }
+  .product-catalog-section .service-side > .service-copy{grid-row:1}
+  .product-catalog-section .service-side > .icon{
+    grid-row:2;
+    justify-content:flex-start;
+    margin-top:8px;
+  }
+}
+
+/* LEISTUNGEN — make the right-hand category pictograms visibly intentional.
+   The global .icon rule is only 54x54px; override the wrapper itself here,
+   otherwise a larger IMG still reads visually like a small marker. */
+@media (min-width:1181px){
+  .product-catalog-section .service-side{
+    grid-template-columns:minmax(0,820px) minmax(300px,1fr) !important;
+    column-gap:96px !important;
+  }
+  .product-catalog-section .service-side > .icon{
+    width:100% !important;
+    height:auto !important;
+    min-height:310px !important;
+    justify-self:stretch !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    overflow:visible !important;
+  }
+  .product-catalog-section .service-side .pictogram-asset{
+    width:300px !important;
+    height:300px !important;
+    flex:0 0 300px !important;
+    max-width:none !important;
+  }
+  .product-catalog-section .service-row:first-of-type .pictogram-asset{
+    width:282px !important;
+    height:282px !important;
+    flex:0 0 282px !important;
+  }
+}
+
+@media (min-width:981px) and (max-width:1180px){
+  .product-catalog-section .service-side > .icon{
+    width:100% !important;
+    height:auto !important;
+    min-height:240px !important;
+    justify-self:stretch !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    overflow:visible !important;
+  }
+  .product-catalog-section .service-side .pictogram-asset{
+    width:230px !important;
+    height:230px !important;
+    flex:0 0 230px !important;
+    max-width:none !important;
+  }
+  .product-catalog-section .service-row:first-of-type .pictogram-asset{
+    width:216px !important;
+    height:216px !important;
+    flex:0 0 216px !important;
+  }
+}
+
+/* LEISTUNGEN — final optical balance for right-hand category pictograms (2026-09-20) */
+@media (min-width:1181px){
+  .product-catalog-section .service-side > .icon{
+    min-height:250px !important;
+  }
+  .product-catalog-section .service-side .pictogram-asset{
+    width:225px !important;
+    height:225px !important;
+    flex:0 0 225px !important;
+  }
+  .product-catalog-section .service-row:first-of-type .pictogram-asset{
+    width:210px !important;
+    height:210px !important;
+    flex:0 0 210px !important;
+  }
+}
+@media (min-width:981px) and (max-width:1180px){
+  .product-catalog-section .service-side > .icon{
+    min-height:200px !important;
+  }
+  .product-catalog-section .service-side .pictogram-asset{
+    width:180px !important;
+    height:180px !important;
+    flex:0 0 180px !important;
+  }
+  .product-catalog-section .service-row:first-of-type .pictogram-asset{
+    width:168px !important;
+    height:168px !important;
+    flex:0 0 168px !important;
+  }
+}
+
+/* LEISTUNGEN — three-stage final polish (2026-09-20)
+   Desktop icon column pulled inward for stronger text/visual coupling;
+   headline alignment, optical sizes and mobile removal retained. */
+
+/* LEISTUNGEN — final implementation (2026-09-20)
+   - tighter distance between section title and first category
+   - category pictograms 10–15% smaller
+   - pictograms aligned to the large category headline, not the eyebrow
+   - pictograms removed on mobile */
+.product-catalog-section>.container>h2{
+  margin-bottom:22px;
+}
+.product-catalog-section .service-row{
+  gap:28px;
+  padding:54px 0;
+}
+.product-catalog-section .service-row:first-of-type{
+  padding-top:16px;
+}
+
+@media (min-width:1181px){
+  .product-catalog-section .service-side{
+    grid-template-columns:minmax(0,820px) minmax(240px,1fr) !important;
+    column-gap:88px !important;
+    align-items:start !important;
+  }
+  .product-catalog-section .service-side > .icon{
+    min-height:0 !important;
+    align-self:start !important;
+    justify-self:stretch !important;
+    display:flex !important;
+    justify-content:flex-end !important;
+    align-items:flex-start !important;
+    padding:54px 40px 0 0 !important;
+    margin:0 !important;
+  }
+  .product-catalog-section .service-side .pictogram-asset{
+    width:198px !important;
+    height:198px !important;
+    flex:0 0 198px !important;
+  }
+  .product-catalog-section .service-row:first-of-type .pictogram-asset{
+    width:184px !important;
+    height:184px !important;
+    flex:0 0 184px !important;
+  }
+}
+
+@media (min-width:981px) and (max-width:1180px){
+  .product-catalog-section .service-side{
+    grid-template-columns:minmax(0,650px) minmax(180px,1fr) !important;
+    column-gap:48px !important;
+    align-items:start !important;
+  }
+  .product-catalog-section .service-side > .icon{
+    min-height:0 !important;
+    align-self:start !important;
+    justify-self:stretch !important;
+    display:flex !important;
+    justify-content:flex-end !important;
+    align-items:flex-start !important;
+    padding:50px 24px 0 0 !important;
+    margin:0 !important;
+  }
+  .product-catalog-section .service-side .pictogram-asset{
+    width:158px !important;
+    height:158px !important;
+    flex:0 0 158px !important;
+  }
+  .product-catalog-section .service-row:first-of-type .pictogram-asset{
+    width:148px !important;
+    height:148px !important;
+    flex:0 0 148px !important;
+  }
+}
+
+@media (max-width:760px){
+  .product-catalog-section>.container>h2{
+    margin-bottom:18px;
+  }
+  .product-catalog-section .service-row{
+    gap:16px;
+    padding:38px 0;
+  }
+  .product-catalog-section .service-row:first-of-type{
+    padding-top:12px;
+  }
+  .product-catalog-section .service-side{
+    gap:0;
+  }
+  .product-catalog-section .service-side > .icon{
+    display:none !important;
+  }
 }
