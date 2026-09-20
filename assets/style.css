@@ -1569,3 +1569,66 @@ h1,h2,h3,p{margin-top:0} h1{font-size:clamp(2.45rem,5vw,5.5rem);line-height:.98;
     display:none !important;
   }
 }
+
+/* PROFILE PORTRAITS — use landing-page dimensions consistently (2026-09-20)
+   Desktop/tablet: 150 × 150 px. Mobile: 130 × 130 px. */
+.owner-strip{
+  grid-template-columns:160px minmax(0,1.35fr) 1px minmax(260px,1fr);
+}
+.owner-strip > .portrait.portrait-photo{
+  width:150px !important;
+  height:150px !important;
+  min-width:150px !important;
+  max-width:150px !important;
+}
+.practice-section .practice-proof{
+  grid-template-columns:150px minmax(0,1fr);
+}
+.practice-section .practice-proof .portrait.portrait-photo{
+  width:150px !important;
+  height:150px !important;
+  min-width:150px !important;
+  max-width:150px !important;
+}
+.contact-owner-inner{
+  grid-template-columns:150px minmax(0,1fr);
+}
+.contact-owner-inner .portrait-photo{
+  width:150px !important;
+  height:150px !important;
+  min-width:150px !important;
+  max-width:150px !important;
+}
+
+@media (max-width:1100px){
+  .owner-strip{
+    grid-template-columns:160px minmax(0,1.25fr) 1px minmax(230px,.9fr);
+  }
+}
+
+@media (max-width:980px){
+  .owner-strip{
+    grid-template-columns:150px minmax(0,1fr);
+  }
+  .practice-section .practice-proof{
+    grid-template-columns:150px minmax(0,1fr);
+  }
+  .contact-owner-inner{
+    grid-template-columns:150px minmax(0,1fr);
+  }
+}
+
+@media (max-width:660px){
+  .owner-strip > .portrait.portrait-photo,
+  .practice-section .practice-proof .portrait.portrait-photo,
+  .contact-owner-inner .portrait-photo{
+    width:130px !important;
+    height:130px !important;
+    min-width:130px !important;
+    max-width:130px !important;
+  }
+  .practice-section .practice-proof,
+  .contact-owner-inner{
+    grid-template-columns:130px minmax(0,1fr);
+  }
+}
