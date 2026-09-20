@@ -22,6 +22,13 @@ document.addEventListener("DOMContentLoaded", () => {
         toggle.focus();
       }
     });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 980 && nav.classList.contains("open")) {
+        nav.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
+    });
   }
 
   const mailForm = document.querySelector("[data-mail-form]");
